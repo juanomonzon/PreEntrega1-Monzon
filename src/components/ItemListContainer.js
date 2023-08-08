@@ -1,21 +1,24 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+import asyncMocks from '../async-mocks';
 
-const ItemListContainer = ({ greeting }) => {
+function ItemListContainer() {
+  const { id } = useParams();
+
+  const filteredProducts = asyncMocks.filter(product => product.category === id);
+
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12">
-          <div className="item-list-container">
-            <h2>{greeting}</h2>
-            <p>
-              Descubre nuestra amplia selección de cámaras fotográficas y
-              objetivos de alta calidad.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div>
+      <h2>{id.toUpperCase()}</h2>
+      <ul>
+        {filteredProducts.map(product => (
+          <li key={product.id}>
+            <h3>{product.name}</h3>
+          </li>
+        ))}
+      </ul>
     </div>
   );
-};
+}
 
 export default ItemListContainer;

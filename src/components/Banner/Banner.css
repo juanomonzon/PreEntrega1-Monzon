@@ -1,0 +1,45 @@
+.banner {
+
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+
+   background-image: linear-gradient(rgba(146, 137, 137, 0.4), rgba(0, 0, 0, 0.4)),
+url("https://www.blogdelfotografo.com/wp-content/uploads/2014/01/tipos-objetivos-scaled.jpg");
+}
+
+.banner-container {
+    text-align: center;
+
+    padding: 15% 0;
+
+}
+
+.banner h1 {
+
+    margin: 0;
+    text-align: center;
+
+    color: rgb(241, 240, 240);
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+
+    font-size: 62px;
+
+    font-weight: bold;
+
+}
+
+.banner p {
+
+    font-size: 30px;
+    text-align: center;
+
+    color: rgb(243, 240, 240);
+
+    opacity: 0.7;
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+
+}
